@@ -11,9 +11,9 @@ export default async function handler(req, res) {
 
     // Устанавливаем заголовки
     res.setHeader('Content-Type', 'text/plain; charset=utf-8');
-    res.setHeader('Subscription-Userinfo', 'upload=00; download=00; total=0; expire=0');
-    res.setHeader('Cache-Control', 'public, max-age=3600');
-    res.setHeader('content-disposition', 'attachment; filename="all_subs.txt"');
+    res.setHeader('Subscription-Userinfo', 'upload=1; download=1; total=0; expire=0');
+    res.setHeader('Cache-Control', 'public, max-age=60');
+    res.setHeader('Content-Disposition', "inline; filename=\"🚀 all_subs\"; filename*=UTF-8''🚀 all_subs");
 
     res.status(200).send(body);
   } catch (error) {
