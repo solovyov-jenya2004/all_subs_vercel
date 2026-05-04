@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/final_sorted", "destination": "/api/final_sorted" }
+  ]
+}
