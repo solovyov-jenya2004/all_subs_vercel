@@ -1,20 +1,19 @@
-// api/subscription.js
 export default async function handler(req, res) {
-  // Ваша ссылка на GitHub
   const GITHUB_URL = 'https://raw.githubusercontent.com/solovyov-jenya2004/all_subs/main/final_sorted';
-
   try {
-    // Используем динамический импорт для node-fetch
-    const fetch = (await import('node-fetch')).default;
-    
+    // Встроенный fetch доступен глобально
     const response = await fetch(GITHUB_URL);
+    if (!response.ok) {
+      res.status(502).send(`GitHub error: ${response.status}`);
+      return;
+    }
     const body = await response.text();
 
-    // Устанавливаем заголовки, как и в Workers
+    // Устанавливаем заголовки
     res.setHeader('Content-Type', 'text/plain; charset=utf-8');
     res.setHeader('Subscription-Userinfo', 'upload=0; download=0; total=0; expire=0');
     res.setHeader('Cache-Control', 'public, max-age=3600');
-    res.setHeader('Content-Disposition', 'attachment; filename="🚀 all_subs"');
+    res.setHeader('Content-Disposition', 'attachment; filename="all_subs.txt"');
 
     res.status(200).send(body);
   } catch (error) {
