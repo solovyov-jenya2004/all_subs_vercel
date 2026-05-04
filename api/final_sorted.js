@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'text/plain; charset=utf-8');
     res.setHeader('Subscription-Userinfo', 'upload=1; download=1; total=0; expire=0');
     res.setHeader('Cache-Control', 'public, max-age=60');
-    res.setHeader('Content-Disposition', "inline; filename=\"🚀 all_subs\"; filename*=UTF-8''%F0%9F%9A%80%20all_subs");
+    res.setHeader('Content-Disposition', "inline; filename=\"all_subs\"; filename*=UTF-8''%F0%9F%9A%80%20all_subs");
 
     res.status(200).send(body);
   } catch (error) {
