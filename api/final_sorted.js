@@ -14,6 +14,12 @@ export default async function handler(req, res) {
     res.setHeader('Subscription-Userinfo', 'upload=0; download=0; total=0');
     res.setHeader('Cache-Control', 'public, max-age=60');
     res.setHeader('Content-Disposition', "inline; filename=\"all_subs\"; filename*=UTF-8''%F0%9F%9A%80%20all_subs");
+    res.setHeader('profile-title', '🚀 all_subs');
+    res.setHeader('profile-web-page-url', 'https://github.com/solovyov-jenya2004/all_subs');
+    res.setHeader('support-url', 'https://github.com/solovyov-jenya2004/all_subs/issues');
+    res.setHeader('profile-update-interval', '1');
+    res.setHeader('subscription-userinfo', 'upload=0; download=0; total=0');
+    res.setHeader('announce', '⚡ Используйте конфиги только в условиях «белых списков»');
 
     res.status(200).send(body);
   } catch (error) {
