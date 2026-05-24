@@ -28,7 +28,7 @@ https://solovyov-jenya2004.vercel.app/api/final_sorted
 https://solovyov-jenya2004.vercel.app/api/final_sorted_base64
 ```
 
-### 3🎲 Мобильная подписка
+### 3. Мобильная подписка
 
 Этот эндпоинт каждый раз отдаёт **новый случайный набор** конфигов из общей базы.  
 По умолчанию — **100** конфигов.
