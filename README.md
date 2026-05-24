@@ -4,7 +4,7 @@
 [![Stars](https://img.shields.io/github/stars/solovyov-jenya2004/all_subs_vercel?style=flat-square&color=0e75b6)](https://github.com/solovyov-jenya2004/all_subs_vercel/stargazers)
 [![Issues](https://img.shields.io/github/issues/solovyov-jenya2004/all_subs_vercel?style=flat-square&color=0e75b6)](https://github.com/solovyov-jenya2004/all_subs_vercel/issues)
 [![Last commit](https://custom-icon-badges.demolab.com/github/last-commit/solovyov-jenya2004/all_subs_vercel?logo=history&logoColor=white&color=0e75b6&style=flat-square)](https://github.com/solovyov-jenya2004/all_subs_vercel/commits/main)
-![Visitors](https://komarev.com/ghpvc/?username=solovyov-jenya2004&repo=all_subs_vercel&label=Просмотры&color=0e75b6&style=flat-square)
+![Visitors](https://komarev.com/ghpvc/?username=solovyov-jenya2004&repo=all_subs_vercel&label=visitors&color=0e75b6&style=flat-square)
 
 > ⚡ Быстрое и стабильное зеркало [основного репозитория all_subs](https://github.com/solovyov-jenya2004/all_subs).  
 > API‑эндпоинты при каждом запросе загружают актуальную подписку напрямую с GitHub.
