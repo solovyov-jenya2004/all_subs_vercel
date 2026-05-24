@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
     res.setHeader('Content-Type', 'text/plain; charset=utf-8');
     res.setHeader('Subscription-Userinfo', 'upload=0; download=0; total=0');
-    res.setHeader('Cache-Control', 'public, max-age=60');
+    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');   // <-- без кэша
     res.setHeader('Content-Disposition',
       "inline; filename=\"all_subs\"; filename*=UTF-8''%F0%9F%9A%80%20all_subs"
     );
