@@ -2,8 +2,9 @@
 
 [![Статус деплоя](https://img.shields.io/github/deployments/solovyov-jenya2004/all_subs_vercel/Production?style=flat-square&logo=vercel&label=Статус&color=blue)](https://github.com/solovyov-jenya2004/all_subs_vercel/deployments)
 [![Stars](https://img.shields.io/github/stars/solovyov-jenya2004/all_subs_vercel?style=flat-square&color=0e75b6)](https://github.com/solovyov-jenya2004/all_subs_vercel/stargazers)
+[![Issues](https://img.shields.io/github/issues/solovyov-jenya2004/all_subs_vercel?style=flat-square&color=0e75b6)](https://github.com/solovyov-jenya2004/all_subs_vercel/issues)
 [![Last commit](https://custom-icon-badges.demolab.com/github/last-commit/solovyov-jenya2004/all_subs_vercel?logo=history&logoColor=white&color=0e75b6&style=flat-square)](https://github.com/solovyov-jenya2004/all_subs_vercel/commits/main)
-![Visitors](https://komarev.com/ghpvc/?username=solovyov-jenya2004&repo=all_subs_vercel&label=Просмотры&color=0e75b6&style=flat-square)
+![Visitors](https://komarev.com/ghpvc/?username=solovyov-jenya2004&label=visitors&color=0e75b6&style=flat-square)
 
 > ⚡ Быстрое и стабильное зеркало [основного репозитория all_subs](https://github.com/solovyov-jenya2004/all_subs).  
 > API‑эндпоинты при каждом запросе загружают актуальную подписку напрямую с GitHub.
@@ -55,6 +56,15 @@ https://solovyov-jenya2004.vercel.app/api/random
 
 Основной генератор подписок работает в [all_subs](https://github.com/solovyov-jenya2004/all_subs) и запускается каждую минуту.  
 Там же вы можете найти полный список источников, FAQ и документацию.
+
+---
+## 🌱 В планах
+
+- [x] Зеркало полного списка (обычный текст)
+- [x] Зеркало в Base64
+- [x] Случайная подписка с настраиваемым количеством
+- [x] Кэширование с регулируемым интервалом (сейчас 1 минута)
+- [ ] Выбор протоколов (например, только VLESS или только Shadowsocks)
 
 ---
 
