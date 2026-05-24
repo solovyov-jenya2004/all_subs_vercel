@@ -1,18 +1,8 @@
-// api/random.js
-// Берёт случайные конфиги из final_sorted по URL, кеширует на 10 минут
 const https = require('https');
 
 const CONFIG_URL = 'https://raw.githubusercontent.com/solovyov-jenya2004/all_subs/main/final_sorted';
-const CACHE_TTL = 600_000; // 10 минут
-
-let cachedLines = null;
-let lastFetch = 0;
 
 async function fetchConfigLines() {
-  const now = Date.now();
-  if (cachedLines && (now - lastFetch) < CACHE_TTL) {
-    return cachedLines;
-  }
   const data = await new Promise((resolve, reject) => {
     https.get(CONFIG_URL, (res) => {
       let body = '';
@@ -20,9 +10,7 @@ async function fetchConfigLines() {
       res.on('end', () => resolve(body));
     }).on('error', reject);
   });
-  cachedLines = data.split('\n').map(l => l.trim());
-  lastFetch = now;
-  return cachedLines;
+  return data.split('\n').map(l => l.trim());
 }
 
 function shuffle(arr) {
