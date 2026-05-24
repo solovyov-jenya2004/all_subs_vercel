@@ -5,8 +5,8 @@
 [![Last commit](https://custom-icon-badges.demolab.com/github/last-commit/solovyov-jenya2004/all_subs_vercel?logo=history&logoColor=white&color=0e75b6&style=flat-square)](https://github.com/solovyov-jenya2004/all_subs_vercel/commits/main)
 ![Visitors](https://komarev.com/ghpvc/?username=solovyov-jenya2004&repo=all_subs_vercel&label=Просмотры&color=0e75b6&style=flat-square)
 
-> ⚡ Мгновенное и стабильное зеркало [основного репозитория all_subs](https://github.com/solovyov-jenya2004/all_subs).  
-> Все файлы обновляются автоматически каждую минуту и раздаются через глобальную сеть Vercel.
+> ⚡ Быстрое и стабильное зеркало [основного репозитория all_subs](https://github.com/solovyov-jenya2004/all_subs).  
+> API‑эндпоинты при каждом запросе загружают актуальную подписку напрямую с GitHub.
 
 ---
 
@@ -47,7 +47,11 @@ https://solovyov-jenya2004.vercel.app/api/random
 
 ## 🧠 Как это устроено
 
-Этот репозиторий содержит серверные функции Vercel, которые при каждом запросе загружают актуальный файл `final_sorted` из основного репозитория. 
+Этот репозиторий содержит три серверные функции Vercel, которые работают поверх одного источника — файла `final_sorted` из основного репозитория.
+
+- **`/api/final_sorted`** – загружает полный список конфигов и отдаёт его как обычный текст.  
+- **`/api/final_sorted_base64`** – делает то же самое, но кодирует результат в Base64.  
+- **`/api/random`** – загружает полный список, перемешивает его и возвращает случайную выборку. Количество можно задать параметром `?n=`. По умолчанию отдаётся 100 конфигов.
 
 Основной генератор подписок работает в [all_subs](https://github.com/solovyov-jenya2004/all_subs) и запускается каждую минуту.  
 Там же вы можете найти полный список источников, FAQ и документацию.
