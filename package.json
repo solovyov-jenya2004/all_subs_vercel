@@ -1,0 +1,22 @@
+{
+  "name": "all_subs_vercel",
+  "version": "1.0.0",
+  "description": "VPN-подписка для белых списков в РФ через Vercel",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solovyov-jenya2004/all_subs_vercel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/solovyov-jenya2004/all_subs_vercel/issues"
+  },
+  "homepage": "https://github.com/solovyov-jenya2004/all_subs_vercel#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
