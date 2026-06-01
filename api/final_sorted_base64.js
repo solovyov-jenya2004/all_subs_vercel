@@ -1,10 +1,7 @@
-import { injectAnalytics } from '@vercel/analytics/server';
-
 export default async function handler(req, res) {
-  try {
-    injectAnalytics({ request: req });
+  const BASE64_URL = 'https://raw.githubusercontent.com/solovyov-jenya2004/all_subs/main/final_sorted_base64';
 
-    const BASE64_URL = 'https://raw.githubusercontent.com/solovyov-jenya2004/all_subs/main/final_sorted_base64';
+  try {
     const response = await fetch(BASE64_URL);
     if (!response.ok) {
       return res.status(502).send(`GitHub error: ${response.status}`);
@@ -14,7 +11,7 @@ export default async function handler(req, res) {
 
     res.setHeader('Content-Type', 'text/plain; charset=utf-8');
     res.setHeader('Subscription-Userinfo', 'upload=0; download=0; total=0');
-    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');   // <-- без кэша
     res.setHeader('Content-Disposition',
       "inline; filename=\"all_subs\"; filename*=UTF-8''%F0%9F%9A%80%20all_subs"
     );
