@@ -1,4 +1,5 @@
 const https = require('https');
+import { injectAnalytics } from '@vercel/analytics/server';
 
 const CONFIG_URL = 'https://raw.githubusercontent.com/solovyov-jenya2004/all_subs/main/final_sorted';
 
@@ -23,6 +24,8 @@ function shuffle(arr) {
 
 export default async function handler(req, res) {
   try {
+    injectAnalytics({ request: req });
+    
     const lines = await fetchConfigLines();
     const headers = [];
     const proxies = [];
