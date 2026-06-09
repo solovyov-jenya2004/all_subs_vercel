@@ -1,7 +1,10 @@
 {
   "rewrites": [
+    { "source": "/random", "destination": "/api/random" },
+    { "source": "/random/", "destination": "/api/random" },
     { "source": "/final_sorted", "destination": "/api/final_sorted" },
+    { "source": "/final_sorted/", "destination": "/api/final_sorted" },
     { "source": "/final_sorted_base64", "destination": "/api/final_sorted_base64" },
-    { "source": "/random", "destination": "/api/random" }
+    { "source": "/final_sorted_base64/", "destination": "/api/final_sorted_base64" }
   ]
 }
